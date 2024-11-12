@@ -5,6 +5,6 @@ import 'package:shopping_ui/pages/intro_pages/splashscreen.dart';
 void main() {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: SplashScreen(),
+    home: Homepage(),
   ));
 }
