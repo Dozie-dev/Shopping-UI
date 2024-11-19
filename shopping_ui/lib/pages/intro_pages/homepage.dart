@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Homepage extends StatelessWidget {
+class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
+  @override
+  State<Homepage> createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> {
+  bool _isClicked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -193,11 +199,11 @@ class Homepage extends StatelessWidget {
                                     color: Colors.black,
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
-                                        image: AssetImage('images/shoes.jpg'),
+                                        image: AssetImage('images/doziee.jpg'),
                                         fit: BoxFit.fill)),
                               ),
                               Text(
-                                'Shoes',
+                                'Dozie',
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold),
                               )
@@ -308,6 +314,31 @@ class Homepage extends StatelessWidget {
                               ],
                             ),
                           ),
+
+                          // Circle Container 6
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15.0),
+                            child: Column(
+                              children: [
+                                Container(
+                                  height: 70,
+                                  width: 70,
+                                  decoration: BoxDecoration(
+                                      color: Colors.black,
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                          image: AssetImage('images/shoes.jpg'),
+                                          fit: BoxFit.fill)),
+                                ),
+                                Text(
+                                  'Shoes',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                )
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -343,7 +374,7 @@ class Homepage extends StatelessWidget {
                   ),
                   // Containers
                   Padding(
-                    padding: const EdgeInsets.only(left: 25.0),
+                    padding: const EdgeInsets.only(left: 20.0),
                     child: Row(
                       children: [
                         Container(
@@ -353,12 +384,242 @@ class Homepage extends StatelessWidget {
                               color: Colors.grey.withOpacity(0.2),
                               borderRadius: BorderRadius.circular(20),
                               image: DecorationImage(
-                                  image: AssetImage('images/airpods.png'),
-                                  alignment: Alignment(1, -1))),
-                        )
+                                image: AssetImage('images/airpods.png'),
+                                alignment: Alignment(1, -1),
+                              )),
+                          child: Stack(
+                            //mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 110.0, left: 10),
+                                child: Text(
+                                  'Wireless Headphones',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 135.0),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8.0),
+                                      child: Text('\$120.00',
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold)),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 5.0),
+                                      child: Container(
+                                        height: 18,
+                                        width: 18,
+                                        decoration: BoxDecoration(
+                                            color: Colors.black,
+                                            shape: BoxShape.circle),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 4.0),
+                                      child: Container(
+                                        height: 18,
+                                        width: 18,
+                                        decoration: BoxDecoration(
+                                            color: Colors.blueAccent,
+                                            shape: BoxShape.circle),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 4.0),
+                                      child: Container(
+                                        height: 18,
+                                        width: 18,
+                                        decoration: BoxDecoration(
+                                            color: Colors.orange,
+                                            shape: BoxShape.circle),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 4.0),
+                                      child: Container(
+                                        height: 18,
+                                        width: 18,
+                                        decoration: BoxDecoration(
+                                            border: Border.all(
+                                                color: Colors.black,
+                                                width: 1.5),
+                                            shape: BoxShape.circle),
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              bottom: 5.0),
+                                          child: Text(
+                                            '+2',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 12),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment.topRight,
+                                child: Container(
+                                  height: 40,
+                                  width: 40,
+                                  decoration: BoxDecoration(
+                                      color: Colors.orange[600],
+                                      borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(20))),
+                                  child: IconButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          _isClicked = !_isClicked;
+                                        });
+                                      },
+                                      icon: Icon(
+                                        Icons.favorite,
+                                        color: _isClicked
+                                            ? Colors.red
+                                            : Colors.white,
+                                      )),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        // Container 2
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15.0),
+                          child: Container(
+                            height: 180,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                color: Colors.grey.withOpacity(0.2),
+                                borderRadius: BorderRadius.circular(20),
+                                image: DecorationImage(
+                                  image: AssetImage('images/apparel.png'),
+                                  alignment: Alignment(1, 1),
+                                )),
+                            child: Stack(
+                              //mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 110.0, left: 10),
+                                  child: Text(
+                                    'Women Sweater',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 135.0),
+                                  child: Row(
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 8.0),
+                                        child: Text('\$120.00',
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.bold)),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 5.0),
+                                        child: Container(
+                                          height: 18,
+                                          width: 18,
+                                          decoration: BoxDecoration(
+                                              color: Colors.brown,
+                                              shape: BoxShape.circle),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 4.0),
+                                        child: Container(
+                                          height: 18,
+                                          width: 18,
+                                          decoration: BoxDecoration(
+                                              color: Colors.blueAccent,
+                                              shape: BoxShape.circle),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 4.0),
+                                        child: Container(
+                                          height: 18,
+                                          width: 18,
+                                          decoration: BoxDecoration(
+                                              color: Colors.orange,
+                                              shape: BoxShape.circle),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 4.0),
+                                        child: Container(
+                                          height: 18,
+                                          width: 18,
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  color: Colors.black,
+                                                  width: 1.5),
+                                              shape: BoxShape.circle),
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                                bottom: 5.0),
+                                            child: Text(
+                                              '+2',
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 12),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Align(
+                                  alignment: Alignment.topRight,
+                                  child: Container(
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        color: Colors.orange[600],
+                                        borderRadius: BorderRadius.only(
+                                            topRight: Radius.circular(20))),
+                                    child: IconButton(
+                                        onPressed: () {
+                                          setState(() {
+                                            _isClicked = !_isClicked;
+                                          });
+                                        },
+                                        icon: Icon(
+                                          Icons.favorite,
+                                          color: _isClicked
+                                              ? Colors.red
+                                              : Colors.white,
+                                        )),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
             ],
