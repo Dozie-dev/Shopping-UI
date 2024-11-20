@@ -156,19 +156,25 @@ class _HomepageState extends State<Homepage> {
                                       Padding(
                                         padding:
                                             const EdgeInsets.only(right: 73.0),
-                                        child: Container(
-                                          height: 40,
-                                          width: 120,
-                                          decoration: BoxDecoration(
-                                              color: Colors.orange,
-                                              borderRadius:
-                                                  BorderRadius.circular(20)),
-                                          child: Center(
-                                            child: Text(
-                                              'Shop Now',
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontWeight: FontWeight.bold),
+                                        child: InkWell(
+                                          onTap: () {},
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: Container(
+                                            height: 40,
+                                            width: 120,
+                                            decoration: BoxDecoration(
+                                                color: Colors.orange,
+                                                borderRadius:
+                                                    BorderRadius.circular(20)),
+                                            child: Center(
+                                              child: Text(
+                                                'Shop Now',
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
                                             ),
                                           ),
                                         ),
